@@ -1,0 +1,205 @@
+// header
+.header-area {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background: transparent;    
+    transition: all .3s ease-in-out;
+    @include xl{
+        top: 20px;
+    }
+    @include lg{
+        top: 20px;
+    }
+    @include mmd{
+        top: 0px;
+    }
+    .container{
+        border-radius: 10px;
+        border-bottom: 5px solid #000;
+        background: #E5AABA;
+        padding: 10.132px 32px 8.617px 32.887px;
+        @include xl{
+            margin-inline: 10px;
+        }
+        @include lg{
+            margin-inline: 10px;
+            padding: 12px 20px 10px 20px;
+        }
+        @include mmd{
+            border-radius: 0;
+            padding: 8px 10px 8px 10px;
+        }
+    }
+    .header-left{
+        max-width: 334px;
+        .navbar-logo img{ 
+            max-width: 183px;
+            margin-right: 20px;
+            @include xl{
+                margin-right: 5px;
+            }
+            @include lg{
+                max-width: 160px;
+                margin-right: 5px;
+            }
+            @include mmd{
+                max-width: 130px;
+                margin-right: 5px;
+            }
+        }
+        .navbar-brand {
+           @include ssm{
+                margin-right: 5px;
+           }
+        }
+    }
+    & .main-menu{
+        border-radius: 8px;
+        border: 2px solid #51484A;
+        margin-right: 30px;
+        padding-inline: 8px;
+        @include mmd{
+            padding-top: 20px;
+            padding-bottom: 10px;
+            align-items: start !important;
+            gap: 12px;
+            border: 0;
+        }
+        li{
+            @include transition;
+             a{ 
+                color: #51484A;
+                font-family: Outfit;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 110%; /* 19.8px */
+                text-transform: capitalize;
+                cursor: pointer;
+                @include transition;
+                --bs-navbar-nav-link-padding-x: 12px;
+                @include xl{
+                    --bs-navbar-nav-link-padding-x: 12px;
+                }
+                @include lg{
+                    --bs-navbar-nav-link-padding-x: 12px;
+                }
+                @include mmd{
+                    --bs-navbar-nav-link-padding-x: 10px;
+                }
+                @include xl{
+                    padding:10px var(--bs-navbar-nav-link-padding-x);
+                }
+                @include lg{
+                    padding:10px var(--bs-navbar-nav-link-padding-x);
+                }
+                @include mmd{
+                    padding:8px var(--bs-navbar-nav-link-padding-x);
+                }                
+                padding:10px var(--bs-navbar-nav-link-padding-x);
+                padding-bottom: 13px;
+                display: inline-block;
+                position: relative;
+                z-index: 1;
+             }
+             a.active{
+                color: $white;
+             }
+             
+        }
+    } 
+
+    .boxed-btn{
+        padding: 14px 20px !important;
+        padding-bottom: 18px;
+        display: inline-block;
+        border-radius: 8px;
+        border-bottom: 5px solid #000;
+        background: #fc8383;
+        color: #333;
+        text-align: center;
+        font-family: Recursive;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 160%; /* 25.6px */
+        text-transform: uppercase;
+        &:hover{
+            background: #ffc712;
+            color: $primary;
+        }
+        @include lg{
+            padding: 14px 20px !important;
+            border-radius: 10px;
+
+        }
+        @include mmd{
+            padding: 14px 20px !important;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        @include ssm{
+            padding: 10px 15px !important;
+            border-radius: 5px;
+            font-size: 14px;
+            text-transform: capitalize;
+        }
+    }
+    .social-links {
+        gap: 15px;
+        @include ssm{
+            gap: 8px;
+        }
+       a{
+           width: 40px;
+           height: 40px;
+           &:hover{
+            opacity: .7;
+           }
+       }
+       }
+}
+.header-area .main-menu li.active a, .header-area .main-menu li:hover a{
+    color: $primary;
+}
+header.header-area.position-fixed {
+    top: 0px !important;
+}
+.header-area #navbar_top {
+    padding: 0;
+}
+
+.navbar-toggler-icon {
+    width: 1.8em;
+    height: 2em;
+}
+.navbar-toggler:focus{
+    outline: none;
+}
+.navbar-toggler{
+    &:focus{
+        outline: unset;
+        border: unset;
+        box-shadow: none;
+    }
+}
+.navbar-toggler {
+    --bs-navbar-toggler-padding-x: 10px;
+    padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
+    --bs-navbar-toggler-font-size:15px;
+    font-size: var(--bs-navbar-toggler-font-size);
+    color: $white;
+    background-color: $primary;
+    --bs-navbar-toggler-border-color: $primary;
+    border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
+}
+
+.header-area.toggled {
+    @include mmd{
+        background: $primary;
+        transition: all .3s ease-in-out;
+    }
+}

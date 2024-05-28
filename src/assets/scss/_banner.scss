@@ -1,0 +1,255 @@
+.banner{
+    &-area{
+        padding-top: calc(119px + 100 * ((100vw - 360px) / 1380));
+        @include xxxl{
+            padding-top: 220px;
+        }
+        position: relative;
+        z-index: 1;
+        background-image: url('../img/bannerbg.jpg');
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: cover;
+       border-bottom: 10px solid #FFC712;
+       .cloud{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+       }
+    }
+    
+    &-content{
+        position: relative;
+        z-index: 1;
+        padding-bottom: 150px;
+        .presale-box{
+            margin-top: 20px;
+            max-width: 586px;
+            margin-inline: auto;
+            padding: 32px;
+            border-radius: 16px;
+            border: 7px solid #FFC712;
+            background: linear-gradient(180deg, #E5AABA 0%, #1FFB55 100%);
+            @include sm{
+                padding:25px 20px;
+            }
+            @include ssm{
+                padding:25px 10px;
+            }
+            h4{
+                color: $FDDEE5;
+                text-shadow: 3px 2px 0px #000;
+                -webkit-text-stroke-width: 2.2155203819274902px;
+                -webkit-text-stroke-color: #000;
+                font-weight: 400;
+                line-height: 110%; 
+                text-transform: uppercase;
+                margin-bottom: 20px;
+            }
+            .send_sol{
+                margin-top: 40px;
+                color: #D8FFD6;
+                -webkit-text-stroke-width: 2.2155203819274902px;
+                -webkit-text-stroke-color: #000;
+                @include font-32;
+                font-weight: 400;
+                line-height: 110%; /* 35.2px */
+                text-transform: uppercase;
+                @include mmd{
+                    font-size: 25px;
+                    margin-top: 30px;
+                }
+            }
+            #countdown {
+                text-align: center;
+                & .single-item{
+                    display: inline-block;
+                    text-align: center;
+                    position: relative;
+                    z-index: 1;
+                    border-radius: 8px;
+                    margin: 0 7px;
+                    @include ssm{
+                        margin-inline: 5px;
+                    }
+                    span{
+                        color: #504D4E;
+                        font-family: "Outfit", sans-serif;
+                        @include font-32;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 110%; /* 35.2px */
+                        text-transform: capitalize;
+                        background-color: #FFC712;
+                        border: 2px solid #51484A;
+                        width: 105px;
+                        height: 105px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 50%;
+                        margin-inline: auto;
+                        @include mmd{
+                            width: 80px;
+                            height: 80px;
+                        }
+                        @include sm{
+                            font-size: 22px;
+                        }
+                        @include ssm{
+                            width: 50px;
+                            height: 50px;
+                            font-size: 16px;
+                        }
+                    }
+                    h5{
+                        border-radius: 8px;
+                        border: 2px solid #51484A;
+                        background: #FFC712;
+                        color: #51484A;
+                        font-family: "Outfit";
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 110%; /* 17.6px */
+                        text-transform: uppercase;
+                        padding-block: 7px;
+                        margin-top: -12px;
+                        max-width: 90px;
+                        margin-inline: auto;
+                        @include mmd{
+                            font-size: 14px;
+                        }
+                        @include ssm{
+                            font-size: 12px;
+                            padding: 5px;
+                            border-radius: 4px;
+                        }
+                    }
+                }
+                
+                & .single-item:last-child{
+                    @include sm{
+                        margin-bottom: 0px;
+                    }
+                }
+              }
+
+              .copytoclipboard{
+                padding: 10px;
+                @include ssm{
+                    padding: 5px;
+                }
+                input{
+                    border-radius: 10px;
+                    border: 1.599px solid #000;
+                    background: #fc8383;
+                }
+              }
+
+              .scan_wallet{
+                border-radius: 10.714px;
+                border: 0.893px solid #55E570;
+                background: linear-gradient(180deg, #FFC1D2 0%, #68FF8D 100%);
+                padding: 8px 6px;
+                margin-top: 18px;
+                margin-bottom: 25px;
+                display: flex;
+                flex-direction: column;
+                max-width: 182px;
+                margin-inline: auto;
+                img{
+                    margin-bottom: 12px;
+                    max-width: 168px;
+                }
+                button{
+                    border-radius: 7.143px;
+                    border: 0.893px solid #FFF;
+                    background: #A0FFB0;
+                    padding: 10px 20px;
+                    color: #504D4E;
+                    text-align: center;
+                    font-family: "Krungthep";
+                    font-size: 15.625px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    &:hover{
+                        color: $black;
+                        border-color: $black;
+                    }
+                }
+              }
+              .note{
+                color: #51484A;
+                font-family: "Outfit";
+                @include font-18;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 110%; /* 19.8px */
+                text-transform: capitalize;
+                p{
+                    margin-bottom: 10px;
+                }
+              }
+        }
+        .heroLImg{
+            position: absolute;
+            bottom: -16px;
+            left: -150px;
+            max-width: 518px;
+            z-index: -1;     
+            @include xl{
+                left: -20px;
+                max-width: 380px;
+            } 
+            @include lg{
+                left: -80px;
+                max-width: 355px;
+            }
+            @include mmd{
+                left: -80px;
+                max-width: 255px;
+            } 
+            @include sm{
+                left: -80px;
+                max-width: 155px;
+            }
+            @include ssm{
+                left: -20px;
+                max-width: 100px;
+                bottom: -10px;
+            }
+        }
+        .heroRImg{
+            position: absolute;
+            bottom: -12px;
+            right: -150px;
+            max-width: 530px;
+            z-index: -1;            
+            @include xl{
+                right: -20px;
+                max-width: 380px;
+            }           
+            @include lg{
+                right: -80px;
+                max-width: 355px;
+            }         
+            @include mmd{
+                right: -80px;
+                max-width: 255px;
+            }    
+            @include sm{
+                right: -80px;
+                max-width: 155px;
+                bottom: -8px;
+            }
+            @include ssm{
+                right: -20px;
+                max-width: 100px;
+            }
+        }
+    }
+}

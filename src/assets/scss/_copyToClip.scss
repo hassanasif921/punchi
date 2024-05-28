@@ -1,0 +1,43 @@
+.copytoclipboard1 {
+    position: relative;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 12px;
+    border: 1.599px solid #000;
+    background: #5f61e9;
+    max-width: 60%;
+    @include sm{
+      max-width: 90%;
+    }
+  }
+  .copytoclipboard1 input {
+    width: calc(100% - 10px);
+    background: rgba(0, 0, 0, 0);
+    border: 0;
+    padding: 0;
+      padding-right: 0px;
+      padding-left: 0px;
+    color: #ffffff;
+    font-family: "Outfit";
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .28px;
+    padding-right: 35px;
+    padding-left: 15px;
+    height: 56px;
+  }
+  .copytoclipboard1 button img {
+    max-width: 30px;
+    width: 100%;
+  }
+  .copytoclipboard1 button {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    height: 100%;
+    border: 0;
+    background: rgba(0, 0, 0, 0);
+    padding: 0;
+    width: 30px;
+  }

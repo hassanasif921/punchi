@@ -1,0 +1,276 @@
+.roadmap {
+    &-area {
+        padding-bottom: 360px;
+        position: relative;
+        z-index: 1;
+        background-image: url('../img/roadmapBG.jpg');
+        border-top: 10px solid #FFC712;
+        border-bottom: 10px solid #FFC712;
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: cover;
+        .roadmapShap img {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height:auto;
+            top: 0;
+            z-index: -1;
+        }
+    }
+
+    &-content-inner {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.roadmap-wrapper{
+    margin-top: 400px;
+    @include mmd{
+        margin-top: 220px;
+    }
+    .rocket{
+        position: absolute;
+        left: 50%;
+        top: -280px;
+        transform: translateX(-50%);
+        z-index: 2;
+        max-width: 300px;
+    }
+    .roadmapBottomIcon{
+        position: absolute;
+        left: 50%;
+        bottom: -20%;
+        transform: translateX(-50%);
+        max-width: 100px;
+    }
+    .vertical-timeline-element--work{
+        h3{
+            color: #FFEDF1;
+            text-shadow: 2px 2px 0px #000;
+            -webkit-text-stroke-width: 2.0199999809265137px;
+            -webkit-text-stroke-color: #000;
+            @include font-56;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 110%; /* 61.6px */
+            text-transform: uppercase;
+        }
+       
+    }
+}
+.vertical-timeline{
+    position: relative;
+    margin-top: 160px;
+    display: block;
+    max-width: 1000px;
+    margin:0 auto;
+}
+
+.vertical-timeline:before {
+    position: absolute;
+    content: "";
+    left: 50%;
+    margin-left: -6px;
+    top: -15%;
+    height: 130%;
+    background-color: #E5AABA;
+    width: 12px;
+    border-radius: 4px;
+}
+.vertical-timeline-element-content{
+    border-radius: 18px 0px 18px 18px;
+    border: 6px solid #3FBC45;
+    background: rgba(85, 197, 100, 0.70);
+    padding: 16px 40px;
+    position: relative;
+
+    ul{
+        li{
+            color: #FFF;
+            font-family: "Outfit";
+            @include font-20;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal; 
+            position: relative;
+            z-index: 1;
+            padding-left: 30px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            &::before{
+                position: absolute;
+                content: "";
+                top: 0;
+                left: 0;
+                width: 22px;
+                height: 22px;
+                background-image: url('../img/listDot.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center center;
+            }
+        }
+    }
+}
+
+.dot {
+    width: 35px;
+    height: 35px;
+    background: #FFC712;
+    position: absolute;
+    right: -63px;
+    top: 10px;
+    transform: translateY(-50%);
+    border:2px solid #51484A;
+    border-radius: 50%;
+    @include mmd{
+        right: -59px;
+    }
+}
+.vertical-timeline-element--work:nth-child(even) .dot{
+    right: auto;
+    left: -64px;
+}
+.vertical-timeline-element--work:nth-child(odd) .vertical-timeline-element-content{
+    @include mmd{
+        padding-inline: 20px;
+        width: 46%;
+        max-width: 278px;
+        left: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: -176px;
+    }
+    @include sm{
+         max-width: 235px;
+         margin-left: -153px;
+    }
+}
+.vertical-timeline-element--work:nth-child(even) .vertical-timeline-element-content{
+    border-radius: 0px 18px 18px 18px;
+    @include mmd{
+         padding-inline: 20px;
+         width: 46%;
+         max-width: 278px;
+         left: auto;
+         right: -50%;
+         transform: translateX(50%);
+         margin-left: -100px;
+    }
+    @include sm{
+         max-width: 235px;
+         margin-left: -78px;
+    }
+}
+
+.vertical-timeline-element {
+    margin:0;
+}
+
+@media(min-width:992px){
+    .vertical-timeline-element-content {
+        width: 46%;
+    }
+
+    .vertical-timeline-element--work:nth-child(even) {
+        display: flex;
+        justify-content: end;
+    }
+    
+ 
+
+}
+
+
+
+@media(max-width:575px){
+    .vertical-timeline:before {
+        display: none;
+    }
+    .vertical-timeline-element--work:nth-child(odd) .vertical-timeline-element-content{
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+    }
+    .vertical-timeline-element--work:nth-child(even) .vertical-timeline-element-content{
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        right: 0 !important;
+        transform: translateX(0%) !important;
+        @include mmd{
+             padding-inline: 20px;
+             width: 46%;
+             max-width: 278px;
+             left: auto;
+             right: -50%;
+             transform: translateX(50%);
+             margin-left: -100px;
+        }
+        @include sm{
+             max-width: 235px;
+             margin-left: -78px;
+        }
+    }
+    .rocket{
+     display: none;
+    }
+    .roadmapBottomIcon{
+        display: none;
+    }
+    .roadmap-wrapper {
+        margin-top: 0px;
+    }
+    .roadmap-area {
+        padding-bottom: 30px !important;
+
+    }
+    .roadmap-area .roadmapShap img{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1169px){
+    
+    .roadmap-area {
+        padding-bottom: 170px;
+
+    }
+    .vertical-timeline-element-content{
+        margin-bottom: 70px;
+        @include sm{
+            margin-bottom: 50px;
+        }
+    }
+    .vertical-timeline {
+        margin-top: 60px !important;
+    }
+}
+
+@media(min-width:2180px){
+    .roadmap-wrapper {
+        margin-top: 430px;
+    }
+}
+@media(min-width:2350px){
+    .roadmap-wrapper {
+        margin-top: 460px;
+    }
+}
+@media(min-width:2400px){
+    .roadmap-wrapper {
+        margin-top: 530px;
+    }
+}
+@media(min-width:2800px){
+    .roadmap-wrapper {
+        margin-top: 700px;
+    }
+}
+@media(min-width:992px) and (max-width:1400px){
+    .roadmap-wrapper {
+        margin-top: 300px;
+    }
+}
